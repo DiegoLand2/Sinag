@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import classes from './Slider.module.scss'
 import img1 from './ImagesUrl/Url1.jpeg'
-import img2 from './ImagesUrl/Url2.jpeg'
+//import img2 from './ImagesUrl/Url2.jpeg'
 import img3 from './ImagesUrl/Url3.jpeg'
-import img4 from './ImagesUrl/Url4.jpeg'
+//import img4 from './ImagesUrl/Url4.jpeg'
 
 class Slider extends Component {
     
     state = {
         x : 0,
-        urlArr: [img1,img2,img3,img4]
+        urlArr: [img1,img3]
     }
 
     goLeft = () => {

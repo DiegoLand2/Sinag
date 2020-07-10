@@ -4,9 +4,8 @@
     height: 56 px;
     width: 100%;
     position: relative;
-    top: 8px;
     left: 0;
-    background-color: $colorTwo;
+    background-color: $colorThree;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,9 +14,11 @@
 }
 
 .Toolbar_Logo {
-    font-size: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-decoration: none;
-    color: $colorOne;
-    height: 56px;;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 30%;
+    }
 }
+

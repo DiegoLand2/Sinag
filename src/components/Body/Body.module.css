@@ -1,7 +1,14 @@
 .Body {
     background-color: #F7EFA3;
+    
 }
 
-.img {
+.ImgSec2 {
     width: 100%;
+    opacity: 0.6;
+}
+
+.ImgSec3 {
+    width: 100%;
+    opacity: 0.9;
 }

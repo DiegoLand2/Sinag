@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import './App.css';
-import Aux from './hoc/Aux'
+import Aux from './hoc/Auxi'
 import Header from './components/Header/Header'
 import Bottom from './components/Footer/Footer'
 import Body from './components/Body/Body'

@@ -1,25 +1,21 @@
 @import "../../../styles/utils/variables";
 
 .Toolbar {
-    height: 56 px;
-    width: 100%;
-    position: relative;
-    left: 0;
-    background-color: $colorTwo;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0 8px;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 8px;
 }
 
 .Toolbar_Logo {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    img {
-        width: 30%;
-    }
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  img {
+    width: 30%;
+  }
 }
-

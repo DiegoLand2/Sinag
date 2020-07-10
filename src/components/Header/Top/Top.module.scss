@@ -1,0 +1,15 @@
+@import "../../../styles/utils/variables.scss";
+
+.Top {
+  padding: 4px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $colorThree;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  box-sizing: border-box;
+  font-weight: 500;
+  z-index: 900;
+}

@@ -1,11 +1,5 @@
 .Bottom {
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #F5BA8C;
-    justify-content: center;
-    box-sizing: border-box;
-    z-index: 90;
-    padding: 40px;
-    text-align: center;
+  background-color: #f5ba8c;
+  padding: 40px;
+  text-align: center;
 }

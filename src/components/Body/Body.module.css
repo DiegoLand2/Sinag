@@ -1,16 +1,7 @@
 .Body {
-    position: relative;
-    width: 100%;
-    top: 0;
-    left: 0;
     background-color: #F7EFA3;
-    justify-content: center;
-    box-sizing: border-box;
-    text-align: center;
 }
 
 .img {
-    transform: rotate(-90deg);
     width: 100%;
-    top: 0;
 }

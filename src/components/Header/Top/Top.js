@@ -2,6 +2,5 @@ import React from "react";
 
 import classes from "./Top.module.scss";
 
-const top = () => <header className={classes.Top}>Vibes & Design</header>;
-
+const top = () => <div className={classes.Top}>Vibes & Design</div>;
 export default top;

@@ -2,40 +2,43 @@ import React from "react";
 
 import classes from "./SideDrawer.module.scss";
 
-const sideDrawer = (props) => {
-  // let drawerClasses = `${classes.SideDrawer}`
-  // if (props.show) {
-  //     drawerClasses =  `${classes.SideDrawer} ${classes.open}`
-  // }
+import Button from "../UI/button/index";
 
+const sideDrawer = (props) => {
   return (
     <nav className={`${classes.SideDrawer} ${props.show ? classes.open : ""}`}>
-      {/* <nav className={drawerClasses}> */}
       <ul>
         <li className={classes.item}>
-          <a className={classes.itemText} href="/">
-            Quiénes somos
-          </a>
+          <Button icon="store" color="white" size="big" />
+          <div className={classes.TextBox}>
+            <a className={classes.itemText} href="/">
+              Tienda
+            </a>
+          </div>
         </li>
         <li className={classes.item}>
-          <a className={classes.itemText} href="/">
-            Tienda
-          </a>
+          <Button icon="ohm" color="white" size="big" />
+          <div className={classes.TextBox}>
+            <a className={classes.itemText} href="/">
+              Japamalas
+            </a>
+          </div>
         </li>
         <li className={classes.item}>
-          <a className={classes.itemText} href="/">
-            Japamalas
-          </a>
+          <Button icon="kokedama" color="white" size="big" />
+          <div className={classes.TextBox}>
+            <a className={classes.itemText} href="/">
+              Kokedamas
+            </a>
+          </div>
         </li>
         <li className={classes.item}>
-          <a className={classes.itemText} href="/">
-            Kokedamas
-          </a>
-        </li>
-        <li className={classes.item}>
-          <a className={classes.itemText} href="/">
-            Blog
-          </a>
+          <Button icon="blog" color="white" size="big" />
+          <div className={classes.TextBox}>
+            <a className={classes.itemText} href="/">
+              Blog
+            </a>
+          </div>
         </li>
       </ul>
     </nav>

@@ -15,7 +15,22 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+  width: 50%;
   img {
-    width: 30%;
+    width: 25%;
   }
+}
+
+.buttonMenu {
+  width: 25%;
+}
+.secondaryButtonMenu {
+  @extend .buttonMenu;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.primaryButtonMenu {
+  @extend .buttonMenu;
+  display: flex;
 }

@@ -10,6 +10,7 @@
   z-index: 200;
   transform: translateX(-100%);
   transition: 0.3s;
+  border: 1px solid $colorFour;
 }
 
 .SideDrawer.open {
@@ -27,15 +28,27 @@
 }
 
 .SideDrawer li {
+  cursor: pointer;
   padding: 2.5rem 2.5rem 2.5rem 0.5rem;
   &:hover,
   &:active {
     background-color: $colorFive;
   }
+  border-top: 1px solid #a1895480;
+}
+
+.TextBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  display: flex;
 }
 
 .item:hover .itemText {
-  color: $colorThree;
+  color: $colorOne;
 }
 
 .SideDrawer a {

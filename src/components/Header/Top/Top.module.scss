@@ -4,7 +4,23 @@
   font-family: $fontFive;
   margin: 0;
   padding: 0 0 2px 0;
-  letter-spacing: 1rem;
   background-color: $colorThree;
   text-align: center;
+
+    @media (max-width: 575.98px) {
+    font-size: 0.3em;
+    letter-spacing: 0.6rem;
+    }
+    @media (min-width: 575.99px) and (max-width: 767.98px) {
+      font-size: 0.4em;
+      letter-spacing: 0.7rem;
+    }
+    @media (min-width: 767.99px) and (max-width: 991.98px) {
+      font-size: 0.6em;
+      letter-spacing: 0.8rem;
+    }
+    @media (min-width: 991.99px) {
+      font-size: 0.8em;
+      letter-spacing: 2rem;
+    }
 }

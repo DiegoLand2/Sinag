@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "@reach/router";
+
 
 import classes from "./Toolbar.module.scss";
 import Logo from "./LogoSinagV&D.png";
@@ -14,9 +16,7 @@ const toolbar = (props) => (
         onClick={props.click}
       />
     </div>
-    <a href="/" className={classes.Toolbar_Logo}>
-      <img src={Logo} />
-    </a>
+    <Link to="/" className={classes.Toolbar_Logo}><img src={Logo} /></Link>
 
     <div className={classes.secondaryButtonMenu}>
       <Button icon="search" color="black" size="medium" />

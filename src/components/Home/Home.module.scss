@@ -1,0 +1,42 @@
+@import "../../styles/utils/variables";
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  padding-top: 85px;
+
+  @media (max-width: 575.98px) {
+    padding-top: 45px;
+    }
+}
+
+// .ImgSec2 {
+//   width: 100%;
+//   opacity: 0.6;
+//   background-color: $colorThree;
+// }
+
+.Sec2Text {
+  background-image: url(./IMGSec2.png);
+  height: 240px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontFive;
+  font-size: 25px;
+}
+
+.ImgSec3{
+  object-fit: cover;
+  width: 100%;
+}
+
+.ImgDiv {
+  display: flex;
+  flex-flow: column;
+}
+
+

@@ -1,24 +1,65 @@
 .Bottom {
   background-color: #f5ba8c;
-  padding: 40px;
   text-align: center;
   display: flex;
   justify-content: space-evenly;
+
+  @media (max-width: 575.98px) {
+  padding: 25px 10px;
+  }
+  @media (min-width: 575.99px) and (max-width: 767.98px) {
+    padding: 30px;
+  }
+  @media (min-width: 767.99px) and (max-width: 991.98px) {
+    padding: 35px;
+  }
+  @media (min-width: 991.99px) {
+    padding: 40px;
+  }
 }
 
 .FooterSection {
   display: flex;
   flex-flow: column;
   text-align: center;
+  padding: 0 5px;
 }
 
 .FooterSection nav {
-  margin: 6px 0;
+  
+  @media (max-width: 575.98px) {
+    font-size: 15%;
+    margin: 3px 0;
+  }
+  @media (min-width: 575.99px) and (max-width: 767.98px) {
+    font-size: 40%;
+    margin: 4px 0;
+  }
+  @media (min-width: 767.99px) and (max-width: 991.98px) {
+    font-size: 80%;
+    margin: 5px 0;
+  }
+  @media (min-width: 991.99px) {
+    font-size: 120%;
+    margin: 6px 0;
+  }
 }
 
 .FooterTitle {
-  font-size: 120%;
   font-weight: 800;
+
+  @media (max-width: 575.98px) {
+    font-size: 15%;
+  }
+  @media (min-width: 575.99px) and (max-width: 767.98px) {
+    font-size: 40%;
+  }
+  @media (min-width: 767.99px) and (max-width: 991.98px) {
+    font-size: 80%;
+  }
+  @media (min-width: 991.99px) {
+    font-size: 120%;
+  }
 }
 
 .FooterSection1,
@@ -29,7 +70,36 @@
 
 .IconWithText {
   display: flex;
-  justify-content: left;
   align-items: center;
-  padding: 0 0 0 60px;
+  
+  @media (max-width: 575.98px) {
+    font-size: 15%;
+  }
+  @media (min-width: 575.99px) and (max-width: 767.98px) {
+    font-size: 45%;
+  }
+  @media (min-width: 767.99px) and (max-width: 991.98px) {
+    font-size: 80%;
+  }
+  @media (min-width: 991.99px) {
+    font-size: 120%;
+    padding: 0 0 0 60px;
+  }
+}
+
+.Text {
+  text-decoration: none;
+  color: black;
+  @media (max-width: 575.98px) {
+    font-size: 15%;
+  }
+  @media (min-width: 575.99px) and (max-width: 767.98px) {
+    font-size: 45%;
+  }
+  @media (min-width: 767.99px) and (max-width: 991.98px) {
+    font-size: 80%;
+  }
+  @media (min-width: 991.99px) {
+    font-size: 120%;
+  }
 }

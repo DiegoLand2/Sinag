@@ -6,7 +6,7 @@
  import Auxi from '../../../hoc/Auxi'
 
   import Rosario from './Images/Rosario.jpeg'
-  import Atrapasueños from './Images/Atrapasueños.jpeg'
+  import Atrapasuenos from './Images/Atrapasuenos.jpeg'
   import Bolsillo from './Images/Bolsillo.jpeg'
   import Cactus from './Images/Cactus.jpeg'
   import ColorImg from './Images/MosaicoDiademas.jpeg'
@@ -31,7 +31,7 @@
     const lightImgsArr = [
         {id: 1, url: [Cartera1, Cartera2, Cartera3, Cartera4, Cartera5, Cartera6, Cartera7]},
         {id: 2, url: [Rosario]},
-        {id: 3, url: [Atrapasueños]},
+        {id: 3, url: [Atrapasuenos]},
         {id: 4, url: [Kokedama]},
         {id: 5, url: [Cactus]},
         {id: 6, url: [ColorImg]},

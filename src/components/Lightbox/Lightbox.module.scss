@@ -3,7 +3,7 @@
 .ImgShow {
     z-index: 700;
     position: fixed;
-    width: 30%;
+    width: 90%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -64,11 +64,18 @@
     -webkit-transform: rotate(-45deg);
   }
   
-  @media (min-width: 1200px) {
+  @media (min-width: 575.99px) and (max-width: 767.98px) {
+    .ImgShow {width: 70%;}
+  }
+  
+  @media (min-width: 767.99px) and (max-width: 991.98px) {
+    .ImgShow {width: 50%;}
+  }
+  @media screen and (min-width: 991.99px) {
+    .ImgShow {width: 33.33%;}
     .Arrow {
       height: 16px;
       width: 16px;
       border-width: 0 3px 3px 0;
     }
   }
-  

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import classes from "./Slider.module.scss";
-import Carrusel1 from "./ImagesUrl/Carrusel1.jpeg";
 import Carrusel2 from "./ImagesUrl/Carrusel2.jpeg";
 import Carrusel3 from "./ImagesUrl/Carrusel3.jpeg";
 import Carrusel4 from "./ImagesUrl/Carrusel4.jpeg";

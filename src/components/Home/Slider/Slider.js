@@ -1,26 +1,28 @@
 import React, { Component } from "react";
 import classes from "./Slider.module.scss";
-import img1 from "./ImagesUrl/Url1.jpeg";
-import img2 from "./ImagesUrl/Url2.jpeg";
-import img3 from "./ImagesUrl/Url3.jpeg";
-import img4 from "./ImagesUrl/Url4.jpeg";
+import Carrusel1 from "./ImagesUrl/Carrusel1.jpeg";
+import Carrusel2 from "./ImagesUrl/Carrusel2.jpeg";
+import Carrusel3 from "./ImagesUrl/Carrusel3.jpeg";
+import Carrusel4 from "./ImagesUrl/Carrusel4.jpeg";
+import Carrusel5 from "./ImagesUrl/Carrusel5.jpeg";
+import Carrusel6 from "./ImagesUrl/Carrusel6.jpeg";
+import Auxi from '../../../hoc/Auxi'
+
 
 class Slider extends Component {
   state = {
     x: 0,
-    urlArr: [img1, img2, img3, img4],
-    urlProps: [img1, img2, img3, img4],
+    urlArr: [Carrusel3, Carrusel4, Carrusel6, Carrusel2, Carrusel5],
+    urlProps: [Carrusel3, Carrusel4, Carrusel6, Carrusel2, Carrusel5],
   };
 
   goLeft = () => {
     let newX = this.state.x + 100;
-
     this.setState({ x: newX });
   };
 
   goRight = () => {
     let newX = this.state.x - 100;
-
     let newStateArray = [...this.state.urlArr];
 
     if ((this.state.x + 200) % 400 === 0) {
@@ -45,13 +47,14 @@ class Slider extends Component {
           className={classes.Slide}
           style={{ transform: `translateX(${this.state.x}%)` }}
         >
-          <img src={item} className={classes.Imgs} />
+          <img alt={`SliderImg${item.index}`} src={item} className={classes.Imgs} />
         </div>
       );
     });
 
     return (
-      <div className={classes.Slider}>
+      <Auxi >
+        <div className={classes.Slider}>
         {sliderMap}
         {this.state.x !== 0 ? (
           <button className={classes.GoLeft} onClick={this.goLeft}>
@@ -66,7 +69,8 @@ class Slider extends Component {
             <i className={classes.ArrowRight}></i>
           </button>
         ) : null}
-      </div>
+        </div> 
+      </Auxi>
     );
   }
 }

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 
 import Auxi from '../../hoc/Auxi'
 import classes from './Lightbox.module.scss'
@@ -36,7 +36,7 @@ const Lightbox = (props) => {
                 <Backdrop click={props.closeLightbox}/>
     
                 <div className={classes.ImgShow}>
-                        <img src={currentImage.url[X]}/>
+                        <img alt='LightboxImg' src={currentImage.url[X]}/>
 
                         {currentImage.url.length !== 1 ?
                             <Auxi>

@@ -11,13 +11,14 @@
 }
 
 .Toolbar_Logo {
-  padding: 8px 0;
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
+  text-align: center;
   overflow: hidden;
-  width: 50%;
+  width: 70%;
   img {
-    width: 25%;
+    width: 50%;
+    padding: 10px 0;
   }
 }
 
@@ -34,3 +35,13 @@
   @extend .buttonMenu;
   display: flex;
 }
+
+  @media (min-width: 575.99px) and (max-width: 767.98px) {
+    .Toolbar_Logo {width: 60%;}
+  }
+  @media (min-width: 767.99px) and (max-width: 991.98px) {
+    .Toolbar_Logo {width: 40%;}
+  }
+  @media (min-width: 991.99px) {
+    .Toolbar_Logo {width: 30%;}
+  }

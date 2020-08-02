@@ -16,7 +16,7 @@ const toolbar = (props) => (
         onClick={props.click}
       />
     </div>
-    <Link to="/" className={classes.Toolbar_Logo}><img src={Logo} /></Link>
+    <Link to="/" className={classes.Toolbar_Logo}><img alt='SinagVibes&Designs' src={Logo} /></Link>
 
     <div className={classes.secondaryButtonMenu}>
       <Button icon="search" color="black" size="medium" />

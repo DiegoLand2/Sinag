@@ -9,7 +9,12 @@ import Mosaic from "./Mosaic/Mosaic";
 const body = (props) => (
   <div className={classes.Home}>
     <Slider />
-      <img alt={'Taller'} src={Taller} className={classes.ImgSec3} />
+    <div className={classes.phraseDiv}>
+      <div className={classes.phraseBox}>
+      <p>Inspirados en crear desde el alma.</p>
+      </div>
+    </div>
+    <img alt={'Taller'} src={Taller} className={classes.ImgSec3} />
     {/* <div className={classes.Sec2Text}>
       <p>La vida te da sorpresas, sorpresas te da la vida... R.B.</p>
     </div> */}

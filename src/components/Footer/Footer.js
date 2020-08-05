@@ -35,7 +35,7 @@ const bottom = () => (
       </nav>
       <nav className={classes.IconWithText}>
         <Button icon="mail" color="black" size="medium" padding="noPadding" />
-        sinagvive@gmail.com
+        sinaglife@gmail.com
       </nav>
 
       <nav className={classes.IconWithText}>

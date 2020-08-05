@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import classes from "./Slider.module.scss";
 import Carrusel2 from "./ImagesUrl/Carrusel2.jpeg";
 import Carrusel3 from "./ImagesUrl/Carrusel3.jpeg";
@@ -47,6 +48,7 @@ class Slider extends Component {
           style={{ transform: `translateX(${this.state.x}%)` }}
         >
           <img alt={`SliderImg${item.index}`} src={item} className={classes.Imgs} />
+          
         </div>
       );
     });

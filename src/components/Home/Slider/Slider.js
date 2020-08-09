@@ -11,8 +11,8 @@ import Auxi from '../../../hoc/Auxi'
 class Slider extends Component {
   state = {
     x: 0,
-    urlArr: [Carrusel3, Carrusel4, Carrusel6, Carrusel2, Carrusel5],
-    urlProps: [Carrusel3, Carrusel4, Carrusel6, Carrusel2, Carrusel5],
+    urlArr: [Carrusel4, Carrusel3, Carrusel2,Carrusel6,  Carrusel5],
+    urlProps: [Carrusel4, Carrusel3, Carrusel2, Carrusel6, Carrusel5],
   };
 
   goLeft = () => {

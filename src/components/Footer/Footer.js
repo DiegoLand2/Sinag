@@ -17,7 +17,7 @@ const bottom = () => (
     <div className={classes.FooterSection2}>
       <p className={classes.FooterTitle}>Sinag</p>
 
-      <nav>Quiénes Somos</nav>
+      <nav>Conòcenos</nav>
       <nav>Tramitación de Envíos</nav>
       <nav>Política de Devoluciones</nav>
     </div>

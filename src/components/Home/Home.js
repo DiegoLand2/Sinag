@@ -15,9 +15,13 @@ const body = (props) => (
     {/* <div className={classes.Sec2Text}>
       <p>La vida te da sorpresas, sorpresas te da la vida... R.B.</p>
     </div> */}
-    <Mosaic  clickMosaic={props.clickMosaic} showingBackdrop={props.showingBackdrop}/>
+
+    <Mosaic
+      clickMosaic={props.clickMosaic}
+      showingBackdrop={props.showingBackdrop}
+    />
     <div className={classes.ImgDiv}>
-      <img alt={'Piedras'} src={Piedras} className={classes.ImgSec3} />
+      <img alt={"Piedras"} src={Piedras} className={classes.ImgSec3} />
     </div>
   </div>
 );

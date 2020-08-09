@@ -1,4 +1,5 @@
 import React from "react";
+import Spinner from 'react-bootstrap/Spinner'
 
 import Slider from "./Slider/Slider";
 import classes from "./Home.module.scss";
@@ -9,6 +10,7 @@ import Mosaic from "./Mosaic/Mosaic";
 const body = (props) => (
   <div className={classes.Home}>
     <Slider />
+    {/* <Spinner animation="border" variant="warning" /> */}
     <img alt={'Taller'} src={Taller} className={classes.ImgSec3} />
     {/* <div className={classes.Sec2Text}>
       <p>La vida te da sorpresas, sorpresas te da la vida... R.B.</p>

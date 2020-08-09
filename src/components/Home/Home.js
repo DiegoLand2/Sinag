@@ -6,12 +6,14 @@ import classes from "./Home.module.scss";
 import Piedras from "./Piedras.jpeg";
 import Taller from "./Taller.jpeg";
 import Mosaic from "./Mosaic/Mosaic";
+import CenterImage from "./CenterImage/CenterImage";
 
 const body = (props) => (
   <div className={classes.Home}>
     <Slider />
     {/* <Spinner animation="border" variant="warning" /> */}
-    <img alt={'Taller'} src={Taller} className={classes.ImgSec3} />
+    <CenterImage />
+      <img alt={'Taller'} src={Taller} className={classes.ImgSec3} />
     {/* <div className={classes.Sec2Text}>
       <p>La vida te da sorpresas, sorpresas te da la vida... R.B.</p>
     </div> */}

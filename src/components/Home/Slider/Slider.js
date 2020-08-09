@@ -7,6 +7,12 @@ import img3 from "./ImagesUrl/Carrusel6.jpeg";
 import img4 from "./ImagesUrl/Carrusel2.jpeg";
 import img5 from "./ImagesUrl/Carrusel5.jpeg";
 
+class Slider extends Component {
+  state = {
+    x: 0,
+    urlArr: [Carrusel3, Carrusel4, Carrusel6, Carrusel2, Carrusel5],
+    urlProps: [Carrusel3, Carrusel4, Carrusel6, Carrusel2, Carrusel5],
+  };
 
 
 

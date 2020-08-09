@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 
 
 import classes from "./Toolbar.module.scss";
-import Logo from "./LogoSinagV&D.png";
+import Logo from "./logosinagvectoriced.png";
 import Button from "../../UI/button/index";
 
 const toolbar = (props) => (

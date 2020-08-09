@@ -34,7 +34,7 @@ const bottom = () => (
           +34 690484893
         </nav>
       </a>
-      <a href='mailto:sinaglife@gmail.com?Subject=Interesado%20en%20sus%20artes' target='blank'>
+      <a href='mailto:sinaglife@gmail.com?Subject=Interesado%20en%20sus%20artes'>
         <nav className={classes.IconWithText}>
           <Button icon="mail" color="black" size="medium" padding="noPadding" />
           sinaglife@gmail.com

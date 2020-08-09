@@ -23,30 +23,38 @@ const bottom = () => (
     </div>
     <div className={classes.FooterSection3}>
       <p className={classes.FooterTitle}>Contáctanos</p>
+      <a href='https://api.whatsapp.com/send?phone=34641606832&text=Hola!!' target='blank'>
+        <nav className={classes.IconWithText} >
+          <Button className={classes.Whatsapp}
+            icon="whatsapp"
+            color="black"
+            size="medium"
+            padding="noPadding"
+          />
+          +34 690484893
+        </nav>
+      </a>
+      <a href='mailto:sinaglife@gmail.com?Subject=Interesado%20en%20sus%20artes'>
+        <nav className={classes.IconWithText}>
+          <Button icon="mail" color="black" size="medium" padding="noPadding" />
+          sinaglife@gmail.com
+        </nav>
+      </a>
 
       <nav className={classes.IconWithText}>
-        <Button className={classes.Whatsapp}
-          icon="whatsapp"
-          color="black"
-          size="medium"
-          padding="noPadding"
-        />
-        +34 690484893
-      </nav>
-      <nav className={classes.IconWithText}>
-        <Button icon="mail" color="black" size="medium" padding="noPadding" />
-        sinagvive@gmail.com
-      </nav>
-
-      <nav className={classes.IconWithText}>
-        <Button
-          icon="facebooks"
-          color="black"
-          size="medium"
-          padding="noPadding"
-        />
-        <Button icon="insta" color="black" size="medium" padding="noPadding" />
-        <Button icon="twit" color="black" size="medium" padding="noPadding" />
+        <a href='https://www.facebook.com/sinaglife' target='blank'>
+          <Button
+            icon="facebooks" color="black" size="medium" padding="noPadding"
+          />
+        </a>
+        <a href='https://www.instagram.com/accesoriossinaglife/' target='blank'>
+          <Button
+            icon="insta" color="black" size="medium" padding="noPadding" 
+          />
+        </a>
+        {/* <Button
+         icon="twit" color="black" size="medium" padding="noPadding" 
+        /> */}
       </nav>
     </div>
   </footer>

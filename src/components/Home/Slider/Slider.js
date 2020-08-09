@@ -1,79 +1,55 @@
-import React, { Component } from "react";
+import React, {useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel'
 
-import classes from "./Slider.module.scss";
-import Carrusel2 from "./ImagesUrl/Carrusel2.jpeg";
-import Carrusel3 from "./ImagesUrl/Carrusel3.jpeg";
-import Carrusel4 from "./ImagesUrl/Carrusel4.jpeg";
-import Carrusel5 from "./ImagesUrl/Carrusel5.jpeg";
-import Carrusel6 from "./ImagesUrl/Carrusel6.jpeg";
-import Auxi from '../../../hoc/Auxi'
+import img1 from "./ImagesUrl/Carrusel3.jpeg";
+import img2 from "./ImagesUrl/Carrusel4.jpeg";
+import img3 from "./ImagesUrl/Carrusel6.jpeg";
+import img4 from "./ImagesUrl/Carrusel2.jpeg";
+import img5 from "./ImagesUrl/Carrusel5.jpeg";
 
 
-class Slider extends Component {
-  state = {
-    x: 0,
-    urlArr: [Carrusel3, Carrusel4, Carrusel6, Carrusel2, Carrusel5],
-    urlProps: [Carrusel3, Carrusel4, Carrusel6, Carrusel2, Carrusel5],
+
+
+function Slider() {
+  const [index, setIndex] = useState(0);
+
+
+  const imgsArr = [
+      {img: img1, alt:'First image', captionLabel: 'First slide label', captionMessage: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'},
+      {img: img2, alt:'Second image', captionLabel: 'Second slide label', captionMessage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+      {img: img3, alt:'Third image', captionLabel: 'Third slide label', captionMessage: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'},
+      {img: img4, alt:'Fourth image', captionLabel: 'Fourth slide label', captionMessage: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'},
+      {img: img5, alt:'Fifth image', captionLabel: 'Fifth slide label', captionMessage: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'}
+  ]
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
   };
 
-  goLeft = () => {
-    let newX = this.state.x + 100;
-    this.setState({ x: newX });
-  };
-
-  goRight = () => {
-    let newX = this.state.x - 100;
-    let newStateArray = [...this.state.urlArr];
-
-    if ((this.state.x + 200) % 400 === 0) {
-      newStateArray = newStateArray.concat(this.state.urlProps);
-    }
-
-    if (this.state.x === -1900) {
-      newX = 0;
-    }
-
-    if (this.state.x === -100) {
-      newStateArray = this.state.urlProps;
-    }
-
-    this.setState({ x: newX, urlArr: newStateArray });
-  };
-  render() {
-    let sliderMap = this.state.urlArr.map((item, index) => {
+  
+  let carouselMap = imgsArr.map((item, index) => {
       return (
-        <div
-          key={index}
-          className={classes.Slide}
-          style={{ transform: `translateX(${this.state.x}%)` }}
-        >
-          <img alt={`SliderImg${item.index}`} src={item} className={classes.Imgs} />
-          
-        </div>
-      );
-    });
+      <Carousel.Item key={index}>
+        <img
+          className="d-block w-100"
+          src={item.img}
+          alt={item.alt}
+        />
+        <Carousel.Caption>
+          <h3>{item.captionLabel}</h3>
+          <p>{item.captionMessage}</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      )
+  })
 
-    return (
-      <Auxi >
-        <div className={classes.Slider}>
-        {sliderMap}
-        {this.state.x !== 0 ? (
-          <button className={classes.GoLeft} onClick={this.goLeft}>
-            <i className={classes.ArrowLeft}></i>
-            <i className={classes.ArrowLeft}></i>
-          </button>
-        ) : null}
-
-        {this.state.x !== 400 ? (
-          <button className={classes.GoRight} onClick={this.goRight}>
-            <i className={classes.ArrowRight}></i>
-            <i className={classes.ArrowRight}></i>
-          </button>
-        ) : null}
-        </div> 
-      </Auxi>
-    );
-  }
+  return (
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={5000} wrap={true}>
+      {carouselMap}
+    </Carousel>
+  );
 }
+
+//   render(<ControlledCarousel />);
 
 export default Slider;

@@ -15,6 +15,7 @@ import Blog from "./Pages/Blog/Blog";
 import SideDrawer from "./components/Header/Toolbar/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
 
+
 class App extends Component {
   state = {
     sideDrawerOpen: false,

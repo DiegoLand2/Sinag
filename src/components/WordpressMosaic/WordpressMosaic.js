@@ -23,13 +23,6 @@ const WordpressMosaic = () => {
     });
   }, []);
 
-  //// Hosting test ////
-  useEffect(() => {
-    axios.get(`https://sinaglife.com/API/wp-json/wp/v2/pages`).then((resp) => {
-      console.log(resp, "HOSTING REQUEST");
-    });
-  }, []);
-
   const imgClicked = (index) => {
     const productACF = productData[index].acf;
 

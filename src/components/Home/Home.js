@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
-// import Spinner from 'react-bootstrap/Spinner'
+// import Spinner from 'react-bootstrap/Spinner'+
+
+import axios from "axios";
 
 import Slider from "./Slider/Slider";
 import classes from "./Home.module.scss";
@@ -14,7 +16,7 @@ const body = (props) => {
       console.log(resp, "HOSTING REQUEST");
     });
   }, []);
-  console.log(resp, "HOSTING REQUEST will be tried");
+  console.log("HOSTING REQUEST will be tried");
 
   return (
     <div className={classes.Home}>

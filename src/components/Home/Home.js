@@ -1,5 +1,5 @@
 import React from "react";
-import Spinner from 'react-bootstrap/Spinner'
+// import Spinner from 'react-bootstrap/Spinner'
 
 import Slider from "./Slider/Slider";
 import classes from "./Home.module.scss";
@@ -13,7 +13,7 @@ const body = (props) => (
     <Slider />
     {/* <Spinner animation="border" variant="warning" /> */}
     <CenterImage />
-      <img alt={'Taller'} src={Taller} className={classes.ImgSec3} />
+    <img alt={"Taller"} src={Taller} className={classes.ImgSec3} />
     {/* <div className={classes.Sec2Text}>
       <p>La vida te da sorpresas, sorpresas te da la vida... R.B.</p>
     </div> */}

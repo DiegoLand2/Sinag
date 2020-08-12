@@ -6,52 +6,43 @@ import classes from "./WordpressMosaic.module.scss";
 import Lightbox from "../Lightbox/Lightbox";
 import Auxi from "../../hoc/Auxi";
 
-function WordpressMosaic() {
+const WordpressMosaic = () => {
   const [productData, setProductData] = useState(null);
-  const [mosaic, setMosaic] = useState(null);
 
-  /*  useEffect(() => {
-    axios.get(`http://localhost/wp-json/wp/v2/pages`).then((resp) => {
-      console.log(resp.data);
-      const productArray = resp.data.filter((page) => page.parent === 38);
-      setProductData(productArray);
-    });
-  }, []); */
+  const [lightImgsArr, setLightImgsArr] = useState([]);
+
+  const [showLightbox, setShowLightBox] = useState(false);
 
   useEffect(() => {
     axios.get(`http://localhost/wp-json/wp/v2/pages`).then((resp) => {
-      console.log(resp.data);
-      var productArray = resp.data.filter((page) => page.parent === 38);
+      const productArray = resp.data.filter(
+        (page) => page.parent === 38 && page.acf.product_showInMosaic
+      );
 
-      productArray = productArray.concat(productArray);
-      productArray = productArray.concat(productArray);
-      productArray = productArray.concat(productArray);
-      productArray = productArray.concat(productArray);
-
-      let mosaic = productArray.map((product, i) => {
-        console.log(product);
-        console.log(product.acf.product_imagen1);
-        console.log(product.acf.product_title);
-        return (
-          <div key={i} className={classes.Imgs}>
-            <img
-              src={product.acf.product_image1}
-              onClick={() => imgClicked(i)}
-            />
-          </div>
-        );
-      });
-
-      setMosaic(mosaic);
+      setProductData(productArray);
     });
   }, []);
 
-  const [showLightbox, setShowLightBox] = useState(false);
-  const [imageIndex, setImageIndex] = useState(0);
+  //// Hosting test ////
+  useEffect(() => {
+    axios.get(`https://sinaglife.com/API/wp-json/wp/v2/pages`).then((resp) => {
+      console.log(resp, "HOSTING REQUEST");
+    });
+  }, []);
 
-  let imgClicked = (index) => {
+  const imgClicked = (index) => {
+    const productACF = productData[index].acf;
+
+    let lightboxUrls = [];
+
+    for (let key in productACF) {
+      if (key.includes("product_image") && productACF[key]) {
+        lightboxUrls.push(productACF[key].url);
+      }
+    }
+
+    setLightImgsArr(lightboxUrls);
     setShowLightBox(true);
-    setImageIndex(index);
   };
 
   const closeLightbox = () => {
@@ -60,17 +51,30 @@ function WordpressMosaic() {
 
   return (
     <Auxi>
-      <div className={classes.Mosaic}>{mosaic}</div>
-      {/* {showLightbox ? (
-          <Lightbox
-            index={imageIndex}
-            lightImgsArr={lightImgsArr}
-            showLightbox={showLightbox}
-            closeLightbox={() => closeLightbox()}
-          />
-        ) : null} */}
+      <div className={classes.Mosaic}>
+        {productData
+          ? productData.map((product, i) => {
+              return (
+                <div key={i} className={classes.Imgs}>
+                  <img
+                    src={product.acf.product_image1.url}
+                    onClick={() => imgClicked(i)}
+                    alt={product.acf.product_image1.alt}
+                  />
+                </div>
+              );
+            })
+          : null}
+      </div>
+      {showLightbox ? (
+        <Lightbox
+          lightImgsArr={lightImgsArr}
+          showLightbox={showLightbox}
+          closeLightbox={() => closeLightbox()}
+        />
+      ) : null}
     </Auxi>
   );
-}
+};
 
 export default WordpressMosaic;

@@ -7,7 +7,6 @@ import Piedras from "./Piedras.jpeg";
 import Taller from "./Taller.jpeg";
 import Mosaic from "./Mosaic/Mosaic";
 import CenterImage from "./CenterImage/CenterImage";
-import { useEffect } from "react";
 
 const body = (props) => {
   useEffect(() => {

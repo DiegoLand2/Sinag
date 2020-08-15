@@ -6,6 +6,9 @@ import "./App.css";
 import Aux from "./hoc/Auxi";
 import Header from "./components/Header/Header";
 import WordpressMosaic from "./components/WordpressMosaic/WordpressMosaic";
+import WordpressSlider from "./components/WordpressSlider/WordpressSlider";
+import WordpressBlog from "./components/WordpressBlog/WordpressBlog";
+import WordpressPost from "./components/WordpressBlog/WordpressPost/WordpressPost";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Tienda from "./Pages/Tienda/Tienda";
@@ -14,7 +17,6 @@ import Kokedamas from "./Pages/Kokedamas/Kokedamas";
 import Blog from "./Pages/Blog/Blog";
 import SideDrawer from "./components/Header/Toolbar/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
-
 
 class App extends Component {
   state = {
@@ -71,7 +73,10 @@ class App extends Component {
               <Japamalas path="/Japamalas" />
               <Kokedamas path="/Kokedamas" />
               <Blog path="/Blog" />
-              <WordpressMosaic path="/WordpressMosaic" />
+              <WordpressMosaic path="/wordpressmosaic" />
+              <WordpressSlider path="/wordpressslider" />
+              <WordpressBlog path="/wordpressblog" />
+              <WordpressPost path="/blog/:slug" />
             </Router>
           </div>
 

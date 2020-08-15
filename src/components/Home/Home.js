@@ -11,12 +11,7 @@ import Mosaic from "./Mosaic/Mosaic";
 import CenterImage from "./CenterImage/CenterImage";
 
 const Body = (props) => {
-  useEffect(() => {
-    axios.get(`https://sinaglife.com/API/wp-json/wp/v2/pages`).then((resp) => {
-      console.log(resp, "HOSTING REQUEST");
-    });
-  }, []);
-  console.log("HOSTING REQUEST will be tried");
+  console.log("Connected to netlify");
 
   return (
     <div className={classes.Home}>

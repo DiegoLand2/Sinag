@@ -8,10 +8,12 @@ function Slider() {
   const [carousel, setCarousel] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost/wp-json/wp/v2/pages`).then((resp) => {
-      const dataArray = resp.data.filter((page) => page.parent === 71);
-      setSliderData(dataArray);
-    });
+    axios
+      .get(`https://39570618.servicio-online.net/API/wp-json/wp/v2/pages`)
+      .then((resp) => {
+        const dataArray = resp.data.filter((page) => page.parent === 31);
+        setSliderData(dataArray);
+      });
   }, []);
 
   const handleSelect = (selectedIndex, e) => {

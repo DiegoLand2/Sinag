@@ -5,47 +5,14 @@
   flex-direction: column;
   width: 100%;
   position: relative;
-  padding-top: 90px;
-
-  @media (min-width: 450px) and (max-width: 575.98px) {
-    padding-top: 120px;
-  }
-  @media (min-width: 575.99px) and (max-width: 767.98px) {
-    padding-top: 145px;
-  }
-  @media (min-width: 767.99px) and (max-width: 991.98px) {
-    padding-top: 135px;
-  }
-  @media (min-width: 991.99px) {
-    padding-top: 120px;
-  }}
-
-// .ImgSec2 {
-//   width: 100%;
-//   opacity: 0.6;
-//   background-color: $colorThree;
-// }
-
-.Sec2Text {
-  background-image: url(./IMGSec2.png);
-  height: 240px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: $fontFive;
-  font-size: 25px;
 }
 
-.ImgSec3{
+.ImgSec3 {
   object-fit: cover;
   width: 100%;
-  
 }
 
 .ImgDiv {
   display: flex;
   flex-flow: column;
 }
-
-

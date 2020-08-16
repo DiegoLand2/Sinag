@@ -14,13 +14,17 @@ const WordpressMosaic = () => {
   const [showLightbox, setShowLightBox] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost/wp-json/wp/v2/pages`).then((resp) => {
-      const productArray = resp.data.filter(
-        (page) => page.parent === 38 && page.acf.product_showInMosaic
-      );
-
-      setProductData(productArray);
-    });
+    axios
+      .get(`https://39570618.servicio-online.net/API/wp-json/wp/v2/pages`)
+      .then((resp) => {
+        let productArray = resp.data.filter(
+          (page) => page.parent === 5 && page.acf.product_showInMosaic
+        );
+        productArray = productArray.concat(productArray);
+        productArray = productArray.concat(productArray);
+        productArray = productArray.concat(productArray);
+        setProductData(productArray);
+      });
   }, []);
 
   const imgClicked = (index) => {

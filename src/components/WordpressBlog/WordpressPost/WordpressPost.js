@@ -13,14 +13,15 @@ const WordpressPost = (props) => {
   const params = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost/wp-json/wp/v2/posts`).then((resp) => {
-      let postsArray = resp.data;
-      postsArray = resp.data.filter((post) => {
-        console.log(post.slug, params.slug, post.slug === params.slug);
-        return post.slug === params.slug;
+    axios
+      .get(`https://39570618.servicio-online.net/API/wp-json/wp/v2/posts`)
+      .then((resp) => {
+        let postsArray = resp.data;
+        postsArray = resp.data.filter((post) => {
+          return post.slug === params.slug;
+        });
+        setPostData(postsArray[0]);
       });
-      setPostData(postsArray[0]);
-    });
   }, [props]);
 
   useEffect(() => {
@@ -58,7 +59,7 @@ const WordpressPost = (props) => {
           <Auxi key={"Post Row" + i}>
             {postData.acf["post_paragraph" + i] ? (
               <Auxi>
-                {postData.acf["post_parahraph_position" + i] === "Izquierda" ? (
+                {postData.acf["post_paragraph_position" + i] === "Izquierda" ? (
                   <div className={classes.PostRow}>
                     <div className={classes.Pfix}>
                       <p className={classes.PostParagraph}>

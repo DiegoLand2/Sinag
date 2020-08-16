@@ -10,10 +10,12 @@ const WordpressBlog = (props) => {
   const [blogData, setBlogData] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost/wp-json/wp/v2/posts`).then((resp) => {
-      const postsArray = resp.data;
-      setBlogData(postsArray);
-    });
+    axios
+      .get(`https://39570618.servicio-online.net/API/wp-json/wp/v2/posts`)
+      .then((resp) => {
+        const postsArray = resp.data;
+        setBlogData(postsArray);
+      });
   }, [props]);
 
   return blogData ? (
